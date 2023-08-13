@@ -1,6 +1,11 @@
 name: Deployment
 on:
   - push
+env:
+  MONGODB_CLUSTER_ADDRESS: cluster0.4qy8t.mongodb.net
+  MONGODB_USERNAME: kodega
+  MONGODB_PASSWORD: kodega  
+  MONGODB_DB_NAME: kodega
 jobs:
   unit-test:
     runs-on: ubuntu-latest
