@@ -1,0 +1,19 @@
+name: Deployment
+on:
+  - push
+jobs:
+  unit-test:
+    runs-on: ubuntu-latest
+    steps:
+      - name: checkout the code
+        uses: actions/checkout@v2
+      - name: cache the dependencies
+        uses: actions/cache@v2
+        with:
+          path: ~/.npm
+          key: npm-deps-${{ hashFiles('**/package-lock.json') }}
+      - name: install the dependencies
+        run: npm ci
+
+      - name: run the unit tests
+        run: npm run test
