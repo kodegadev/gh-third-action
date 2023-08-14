@@ -2,9 +2,9 @@ name: Deployment
 on:
   - push
 env:
-  MONGODB_CLUSTER_ADDRESS: cluster0.4qy8t.mongodb.net
-  MONGODB_USERNAME: kodega
-  MONGODB_PASSWORD: kodega  
+  MONGODB_CLUSTER_ADDRESS: dev.so4fvqu.mongodb.net
+  MONGODB_USERNAME: nishu
+  MONGODB_PASSWORD: nishu  
   MONGODB_DB_NAME: kodega
 jobs:
   unit-test:
